@@ -64,3 +64,4 @@ mcp3008[7] (*read from channel 7 *)
 
 Returned values are integers; the MCP3008 returns 10 bit integers ranging from 0 to 1023.
 
+Please note:  This is hardwired to use the chip select channel 0 (CE0)
