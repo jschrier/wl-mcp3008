@@ -55,7 +55,7 @@ make install
 Minimum example (in Mathematica)
 
 ```
-Install["mcp3008"] (*loads the library*)
+Install["wl-mcp3008"] (*loads the library*)
 
 mcp3008[0] (* read from channel 0 *)
 
