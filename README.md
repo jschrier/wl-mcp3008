@@ -1,6 +1,6 @@
 # wl-mcp3008
 
-A simple extension for reading Microchip MCP3008 data in the Wolfram Language on the Raspberry Pi
+A simple extension for reading [Microchip MCP3008](https://www.adafruit.com/product/856) A2D data via SPI in the Wolfram Language on the Raspberry Pi
 
 by Joshua Schrier (2020) <jschrier [at] fordham [dot] edu>
 
@@ -8,11 +8,11 @@ by Joshua Schrier (2020) <jschrier [at] fordham [dot] edu>
 
 ## Pre-requisites:
 
-* [wiring pi](http://wiringpi.com) comes default in Raspbian (no installation necessary)
-* [Mathematica on the Raspberry Pi](https://www.wolfram.com/raspberry-pi/):  the makefile below assumes version 12.0, but it is easy to change this. 
-* Be sure to [enable SPI bus](https://learn.sparkfun.com/tutorials/raspberry-pi-spi-and-i2c-tutorial/all#spi-on-pi) 
-
 (Tested on Raspbian 10 (buster)  with Mathematica 12.0.1)
+
+* [wiring pi](http://wiringpi.com) comes default in Raspbian (no installation necessary)
+* [Mathematica on the Raspberry Pi](https://www.wolfram.com/raspberry-pi/): the Makefile assumes version 12.0, but it is easy to change this. 
+* Be sure to [enable SPI bus](https://learn.sparkfun.com/tutorials/raspberry-pi-spi-and-i2c-tutorial/all#spi-on-pi) 
 
 ## From precompiled binary 
 
@@ -29,7 +29,7 @@ A precompiled ARM-Linux binary for the Raspberry Pi (Raspian 10 on 3B+) is avail
 
 `/opt/Wolfram/WolframEngine/12.0/SystemFiles/Links/MathLink/DeveloperKit/Linux-ARM/CompilerAdditions/mcc`
 
-(or whatever your version is) and then comment out these lines:
+(or whatever your version of the WolframEngine is) and then comment out these lines:
 
 ```
 else  # With gcc, target architecture is set by the -m32 and -m64 flags                                                
