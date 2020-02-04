@@ -1,6 +1,6 @@
 # wl-mcp3008
 
-A simple extension for reading Microchip MCP3008 data in the Wolfram Language
+A simple extension for reading Microchip MCP3008 data in the Wolfram Language on the Raspberry Pi
 
 by Joshua Schrier (2020) <jschrier [at] fordham [dot] edu>
 
@@ -12,11 +12,15 @@ by Joshua Schrier (2020) <jschrier [at] fordham [dot] edu>
 * [Mathematica on the Raspberry Pi](https://www.wolfram.com/raspberry-pi/):  the makefile below assumes version 12.0, but it is easy to change this. 
 * Be sure to [enable SPI bus](https://learn.sparkfun.com/tutorials/raspberry-pi-spi-and-i2c-tutorial/all#spi-on-pi) 
 
+(Tested on Raspbian 10 (buster)  with Mathematica 12.0.1)
+
 ## From precompiled binary 
 
-A precompiled ARM-Linux binary for the Raspberry Pi 3B+ is available in this repository.  You can install it
+A precompiled ARM-Linux binary for the Raspberry Pi (Raspian 10 on 3B+) is available in this repository.  You can install it by running the following command in a terminal window: 
 
-`curl ...`
+`curl https://github.com/jschrier/wl-mcp3008/blob/master/wl-mcp3008 --output ~/.Mathematica/Applications/wl-mcp3008`
+
+(This installs the package for the current user)
 
 
 ## Compiling it yourself
@@ -43,8 +47,7 @@ make
 make install
 ```
 
-(default path will put it into local user's mathematica directory)
-
+(default install path will put it into local user's `.Mathematica/Applications/` directory, like above)
 
 
 # Usage
@@ -60,3 +63,4 @@ mcp3008[7] (*read from channel 7 *)
 ```
 
 Returned values are integers; the MCP3008 returns 10 bit integers ranging from 0 to 1023.
+
